@@ -77,7 +77,7 @@ tests a policy rule in a held-out scenario.
 The work is mechanistic and in silico. It does not establish a clinical dosing
 recommendation and has not been clinically validated.
 
-## Repository release
+## Citation
 
-Before making the repository public, choose an appropriate software/data
-license and add the final archival DOI after creating a Zenodo release.
+Banjar A. *Ramadan Basal Policy Simulation*. Version v1.0.0. Zenodo; 2026.
+https://doi.org/10.5281/zenodo.20688965

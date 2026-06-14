@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the archived v1.0.0 release."
+title: "Ramadan Basal Policy Simulation"
+type: software
+version: "v1.0.0"
+date-released: "2026-06-14"
+authors:
+  - family-names: "Banjar"
+    given-names: "Ameen"
+repository-code: "https://github.com/ameen-banjar/ramadan-basal-policy-simulation"
+url: "https://doi.org/10.5281/zenodo.20688965"
+doi: "10.5281/zenodo.20688965"
+license: "CC-BY-4.0"
