@@ -1,0 +1,22 @@
+# Large generated simulation outputs
+raw/
+outputs/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+
+# Manuscript files are intentionally excluded until publication
+*.tex
+*.pdf
+*.bib
+main.*
+manuscript*
+paper*
