@@ -1,5 +1,7 @@
 # Ramadan Basal Policy Simulation
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20688965.svg)](https://doi.org/10.5281/zenodo.20688965)
+
 Reproducibility package for paired virtual-patient evaluation of basal insulin
 policies during simulated Ramadan fasting.
 
