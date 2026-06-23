@@ -13,6 +13,7 @@ doi: "10.5281/zenodo.20753471"
 license: "CC-BY-4.0"
 abstract: >
   Reproducibility package for paired virtual-patient evaluation of basal insulin
-  policies during simulated Ramadan fasting. Includes UVA/Padova (simglucose,
-  30 patients) and Hovorka 2004 Cambridge model (10 virtual adults) cross-model
-  validation across five basal reduction policies (100%, 90%, 80%, 70%, 60%).
+  policies during simulated Ramadan fasting, using the UVA/Padova (simglucose)
+  model with 30 virtual patients across five basal reduction policies
+  (100%, 90%, 80%, 70%, 60%), including phenotype-stratified dose-response,
+  sensor-noise and meal/timing robustness, and meal-size sensitivity analyses.
