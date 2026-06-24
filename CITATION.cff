@@ -8,8 +8,8 @@ authors:
   - family-names: "Banjar"
     given-names: "Ameen"
 repository-code: "https://github.com/ameen-banjar/ramadan-basal-policy-simulation"
-url: "https://doi.org/10.5281/zenodo.20753471"
-doi: "10.5281/zenodo.20753471"
+url: "https://doi.org/10.5281/zenodo.20828740"
+doi: "10.5281/zenodo.20828740"
 license: "CC-BY-4.0"
 abstract: >
   Reproducibility package for paired virtual-patient evaluation of basal insulin
