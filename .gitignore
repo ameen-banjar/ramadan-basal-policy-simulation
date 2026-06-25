@@ -20,3 +20,4 @@ venv/
 main.*
 manuscript*
 paper*
+raw_primary_run.log

@@ -15,26 +15,29 @@ can be regenerated locally.
 ## Contents
 
 ### Simulation scripts
-- `simulation/ramadan_simulator.py`: UVA/Padova virtual-patient simulation (original).
-- `simulation/simglucose_ramadan.py`: Standalone UVA/Padova 5-policy study (30 patients).
+- `simulation/ramadan_simulator.py`: UVA/Padova virtual-patient simulation engine.
 
 ### Analysis scripts (UVA/Padova primary study)
 - `scripts/run_primary.py`: pre-Ramadan reference plus five full-day policies.
 - `scripts/run_sensor_robustness.py`: two additional CGM sensor-seed replicates.
 - `scripts/run_scenario_extension.py`: stochastic meal/timing scenarios and an
   80% fasting-window-only policy.
+- `scripts/analyze_meal_size.py`: meal-size sensitivity of the dose-response
+  (low- vs high-carbohydrate days, within-patient bootstrap CI and interaction test).
 - `scripts/analyze_*.py`: analyses starting from regenerated raw outputs.
 - `scripts/verify_derived_results.py`: quick verification of bundled results.
 
 ### Data
 - `data/derived/`: compact analysis tables (UVA/Padova primary study).
-- `data/derived/simglucose_dose_response.csv`: 5-policy dose-response (30 patients).
+- `data/derived/meal_size_by_policy.csv`: meal-size effect per policy with CIs.
+- `data/derived/meal_size_patient_level.csv`: per-patient low/high-CHO TIR.
 - `data/input/pre_ramadan_tbr.csv`: minimal phenotype input for the scenario extension.
 
 ### Figures
 - `figures/figure_dose_response.png`: primary UVA/Padova dose-response.
 - `figures/figure_phenotype_policy.png`: phenotype-response analysis.
 - `figures/figure_scenario_extension.png`: stochastic scenario extension.
+- `figures/figure_meal_size.png`: meal-size sensitivity of the dose-response.
 
 Virtual patient identifiers are simulator model identifiers, not human
 participant identifiers. No clinical or personally identifiable data are
@@ -74,13 +77,12 @@ python scripts/run_scenario_extension.py --scenarios 1 2 3 --workers 8
 python scripts/analyze_scenario_extension.py
 ```
 
-### Standalone 5-policy run
+### Meal-size sensitivity
 
 ```bash
-python simulation/simglucose_ramadan.py
+python scripts/run_primary.py --workers 8        # generates raw/primary
+python scripts/analyze_meal_size.py
 ```
-
-Results are written to `simglucose_simulation/results/`.
 
 Generated raw files are written under `raw/`, and regenerated tables/figures
 under `outputs/`. Both directories are ignored by Git.
