@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite the v3.0.0 release."
+message: "If you use this software, please cite the v4.0.0 release."
 title: "Ramadan Basal Policy Simulation"
 type: software
-version: "v3.0.0"
-date-released: "2026-06-24"
+version: "v4.0.0"
+date-released: "2026-06-25"
 authors:
   - family-names: "Banjar"
     given-names: "Ameen"
