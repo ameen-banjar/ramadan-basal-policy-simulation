@@ -120,17 +120,25 @@ def main():
     print(summ.round(2).to_string(index=False))
 
     # Interaction test: does the low-vs-high difference depend on policy?
-    # Permutation on the Spearman correlation between policy and within-patient diff.
+    # Patient-BLOCKED permutation: within each patient, the policy labels are
+    # shuffled across that patient's own five observations, preserving the
+    # repeated-measures structure. The test statistic is the Spearman
+    # correlation between policy and the within-patient low-minus-high diff.
     from scipy.stats import spearmanr
     obs_rho, _ = spearmanr(pl["PolicyPct"], pl["diff"])
-    perm = np.empty(N_BOOT)
-    pol = pl["PolicyPct"].values.copy()
+    pol = pl["PolicyPct"].values
     dif = pl["diff"].values
+    pat = pl["Patient"].values
+    blocks = {p: np.where(pat == p)[0] for p in np.unique(pat)}
+    perm = np.empty(N_BOOT)
     for i in range(N_BOOT):
-        perm[i] = spearmanr(RNG.permutation(pol), dif)[0]
+        permuted = pol.copy()
+        for idx in blocks.values():
+            permuted[idx] = pol[RNG.permutation(idx)]
+        perm[i] = spearmanr(permuted, dif)[0]
     p_int = (np.sum(np.abs(perm) >= abs(obs_rho)) + 1) / (N_BOOT + 1)
-    print(f"\nInteraction (policy x CHO category): "
-          f"rho={obs_rho:.3f}, permutation P={p_int:.4f}")
+    print(f"\nInteraction (policy x CHO category), patient-blocked permutation: "
+          f"rho={obs_rho:.3f}, P={p_int:.4f}")
 
     # Figure
     fig, axes = plt.subplots(1, 2, figsize=(13, 5))
