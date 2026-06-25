@@ -1,6 +1,6 @@
 # Ramadan Basal Policy Simulation
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20828740.svg)](https://doi.org/10.5281/zenodo.20828740)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20848884.svg)](https://doi.org/10.5281/zenodo.20848884)
 
 Reproducibility package for paired virtual-patient evaluation of basal insulin
 policies during simulated Ramadan fasting, using the UVA/Padova (simglucose)
@@ -102,5 +102,5 @@ recommendation and has not been clinically validated.
 
 ## Citation
 
-Banjar A. *Ramadan Basal Policy Simulation*. Version v3.0.0. Zenodo; 2026.
-https://doi.org/10.5281/zenodo.20828740
+Banjar A. *Ramadan Basal Policy Simulation*. Version v4.0.0. Zenodo; 2026.
+https://doi.org/10.5281/zenodo.20848884
